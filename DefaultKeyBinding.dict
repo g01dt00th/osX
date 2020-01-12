@@ -1,0 +1,54 @@
+/*
+^ : Ctrl
+$ : Shift
+~ : Option (Alt)
+@ : Command (Apple)
+# : Numeric Keypad
+
+Non-Printable Key Codes
+
+Up Arrow:     \UF700        Backspace:    \U0008        F1:           \UF704
+Down Arrow:   \UF701        Tab:          \U0009        F2:           \UF705
+Left Arrow:   \UF702        Escape:       \U001B        F3:           \UF706
+Right Arrow:  \UF703        Enter:        \U000A        ...
+Insert:       \UF727        Page Up:      \UF72C
+Delete:       \UF728        Page Down:    \UF72D
+Home:         \UF729        Print Screen: \UF72E
+End:          \UF72B        Scroll Lock:  \UF72F
+Break:        \UF732        Pause:        \UF730
+SysReq:       \UF731        Menu:         \UF735
+Help:         \UF746
+
+*/
+
+
+/* Arrows */
+"\UF702" = "moveLeft:"; /* Left Arrow */
+"\UF703" = "moveRight:"; /* Right Arrow */
+"\UF700" = "moveUp:"; /* Up Arrow */
+"\UF701" = "moveDown:"; /* Down Arrow */
+"^\UF702" = "moveWordBackward:"; /* Ctrl + Left */
+"^\UF703" = "moveWordForward:"; /* Ctrl + Right */
+"$^\UF702" = "moveWordLeftAndModifySelection:"; /* Shift + Ctrl + Left */
+"$^\UF703" = "moveWordRightAndModifySelection:"; /* Shift + Ctrl + Right */
+
+
+
+/* Home/End */
+"\UF729" = "moveToBeginningOfLine:"; /* Home */
+"\UF72B" = "moveToEndOfLine:"; /* End */
+"$\UF729" = "moveToBeginningOfLineAndModifySelection:"; /* Shift + Home */
+"$\UF72B" = "moveToEndOfLineAndModifySelection:"; /* Shift + End */
+"^\UF729" = "moveToBeginningOfDocument:"; /* Ctrl + Home */
+"^\UF72B" = "moveToEndOfDocument:"; /* Ctrl + End */
+"$^\UF729" = "moveToBeginningOfDocumentAndModifySelection:"; /* Shift + Ctrl + Home */
+"$^\UF72B" = "moveToEndOfDocumentAndModifySelection:"; /* Shift + Ctrl + End */
+
+/* pageUp / pageDown */
+"\UF72C"   = "pageUp:";                                      /* PageUp       */
+"\UF72D"   = "pageDown:";                                    /* PageDown     */
+
+/* Other's */
+"$\UF728"  = "cut:";                                         /* Shift + Del  */
+"$\UF727"  = "paste:";                                       /* Shift + Help */
+"^\UF727" = "copy:";
