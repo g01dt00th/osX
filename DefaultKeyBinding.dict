@@ -51,4 +51,4 @@ Help:         \UF746
 /* Other's */
 "$\UF728"  = "cut:";                                         /* Shift + Del  */
 "$\UF727"  = "paste:";                                       /* Shift + Help */
-"^\UF727" = "copy:";
+"^\UF727" = "copy:";                                         /* Ctrl + Help */
