@@ -1,0 +1,12 @@
+let n = readLine()
+
+func sqnc(s: String, l: Int, r: Int, pairs: Int) {
+    if l == pairs && r == pairs {
+        print(s)
+    } else {
+        if l < pairs { sqnc(s: "\(s)(", l: l + 1, r: r, pairs: pairs) }
+        if r < l { sqnc(s: "\(s))", l: l, r: r + 1, pairs: pairs) }
+    }
+}
+
+sqnc(s: "", l: 0, r: 0, pairs: Int(n!)! as Int )
